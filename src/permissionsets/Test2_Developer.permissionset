@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission Set generated for access to custom object Student for the app Test2</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Test2 Developer</label>
+    <license>Salesforce</license>
+</PermissionSet>

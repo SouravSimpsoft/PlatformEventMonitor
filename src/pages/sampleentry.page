@@ -1,0 +1,23 @@
+<apex:page standardController="Weeksheet__c" extensions="addrecord">
+<apex:form >
+  <apex:outputText value="{!data}"></apex:outputText>
+      <apex:pageBlock title="Here you can fill the Daily Timesheet" id="pb">
+          <apex:pageBlockSection columns="4" title="Timesheet" id="pbs">
+                  <apex:inputField value="{!Weeksheet__c.Date__c}"/>
+                  <apex:inputField value="{!Weeksheet__c.Organization__c}"/>
+                  <apex:inputField value="{!Weeksheet__c.Particular__c}"/>
+                  <apex:inputField value="{!Weeksheet__c.Duration_hrs1__c}" id="t1" onchange="sum()"/>
+                  <apex:pageBlockSectionItem > </apex:pageBlockSectionItem>
+                  <apex:inputField value="{!Weeksheet__c.Organization2__c}"/>
+                  <apex:inputField value="{!Weeksheet__c.Particular2__c}" />
+                  <apex:inputField value="{!Weeksheet__c.Duration_hrs2__c}" id="t2" onchange="sum()"/>
+                  <apex:pageBlockSectionItem >Total Daily Working Hours<p id="dk"></p></apex:pageBlockSectionItem>
+                  
+          </apex:pageBlockSection>
+          <div align="center" draggable="false" >
+              <apex:commandButton value="save" action="{!save}"/>
+              <apex:commandButton value="Log out" action="{!lout}"/>
+          </div>
+      </apex:pageBlock>
+   </apex:form> 
+</apex:page>

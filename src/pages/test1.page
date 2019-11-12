@@ -1,0 +1,114 @@
+<apex:page id="pg" docType="html-5.0" controller="MyTimeController" sidebar="false" showHeader="false">
+   <head lang="en">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+            <script type="text/javascript">
+            $(document).ready(function()
+            {
+                    $(".add-row").click(function()
+                    {
+                        var dt = document.getElementById('pg:fm:date').value;
+                        var tf = $("#timefrom").val();
+                        var tt = $("#timeto").val();
+                        var to = $("#topic").val();
+                        var rem = $("#remarks").val();
+                        var dp = $("#dropdown").val();
+                        
+                        var du = tt-tf;
+                        s = tf.split(':');
+                        e = tt.split(':');
+                        min = e[1]-s[1];
+                        hour_carry = 0;
+                        if(min < 0)
+                        {
+                            min += 60;
+                            hour_carry += 1;
+                        }
+                        hour = e[0]-s[0]-hour_carry;
+                        diff = hour + "." + min;
+                        
+                        var markup = "<tr><td>"+dt+"</td><td>"+tf+"</td><td>"+tt+"</td><td>"+to+"</td><td>"+rem+"</td><td>"+dp+"</td><td>"+diff+"</td><td><input type='checkbox' name='record'></td></tr>";
+                        $("table tbody").append(markup);
+                    });
+                    $(".delete-row").click(function()
+                    {
+                        $("table tbody").find('input[name="record"]').each(function()
+                        {
+                            if($(this).is(":checked"))
+                            {                    
+                                $(this).parents("tr").remove();
+                            }
+                        });
+                    });
+                });
+            </script>
+      <style type="text/css">
+      
+      thead {color:black;background-color: rgba(128,255,255,0.4);}
+          th tr{
+          align="center";
+          }
+          table
+                {
+                    border-collapse: collapse;
+                    width: 100%;
+                    margin-top:5%;
+                    background-color: rgba(128,255,255,0.4);
+                }
+                table, th, td 
+                {
+                    border: 1px solid black;
+                    text-align:center;
+                }
+                td 
+                {
+                    text-align:center;
+                }
+                .box{
+                width: 1100px;
+                height: auto;
+                padding:5px;
+                text-align: center;
+                margin:0 auto;
+                background-color: rgba(128,255,255,0.5);
+                border-radius: 20px;
+                margin-top: 30px;
+                font-weight:bold;
+                }
+      </style>
+      </head><body background="https://cdn-images-1.medium.com/max/1200/1*CvjclMDwgh9AqED_h5UVCA.jpeg"/>
+          <p style="font-family:Times New Roman" align="center"><font size="10" style="color:#0d69b7">Timesheet</font></p>
+      
+      <apex:form id="fm">
+      <div class="box">
+          Date: <apex:input type="date" value="{!dat}" id="date" required="true"/>
+                     TimeFrom: <input type="time" id="timefrom" required="true"/>
+                     TimeTo: <input type="time" id="timeto" required="true"/>
+                     Topic: <input type="text" id="topic" required="true"/>
+                     Remarks: <input type="text" id="remarks" required="true"/>
+                     criticality:<select id="dropdown">
+                                      <option value = "1">1</option>
+                                      <option value = "2">2</option>
+                                      <option value = "3">3</option>
+                                      <option value = "4">4</option>
+                                      <option value = "5">5</option>
+                                 </select>
+                                 <input type="button" class="add-row" value="Add"/>
+                                 <input type="button" class="delete-row" value="Delete"/>
+          </div></apex:form>
+     <table class="table">
+                <thead>
+                    <tr>
+                         <th>Date</th>
+                         <th>Time From</th>
+                         <th>Time To</th>
+                         <th>Topic</th>
+                         <th>Remarks</th>
+                         <th>Criticality</th>
+                         <th>Duration(hrs)</th>
+                         <th>Select</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+</apex:page>

@@ -1,0 +1,121 @@
+<apex:page sidebar="false" showHeader="false" controller="paging" extensions="addpage" action="{!checklogout}">
+<head>
+<style>
+
+    
+    #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #3333ff;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #001B36;
+  color: white;
+}
+
+
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #001B36;
+  top: 150px;
+  position: realative;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(0,27,30,0.4);
+}
+.active {
+  background-color: #4CAF50;
+}
+body {
+  background-image: url("https://c.ap8.visual.force.com/resource/1555481834000/background_gradient");
+}
+</style>
+</head>
+<apex:form ><body>
+<img src="https://c.ap8.visual.force.com/resource/1553759227000/demo1" alt="logo"/>
+<ul>
+    <li><apex:commandLink value="Home" action="{!home}"/></li>
+    <li><apex:commandLink value="Profile" action="{!profile}"/></li>
+    <li><apex:commandLink value="Timesheet" action="{!timesheet}"/></li>
+    <li><apex:commandLink value="Expence" action="{!expence}"/></li>
+    <li><apex:commandLink action="{!out}" value="Log out!"/></li>
+</ul>
+ <apex:outputText value="{!data}"></apex:outputText>
+ <!--<apex:pageBlock title="All Timesheet">
+       <apex:commandButton value="Add Timesheet" action="{!add}"/>
+                <apex:pageBlockTable value="{!wks}" var="w">
+                    <apex:column value="{!w.Name}"/>
+                    <apex:column value="{!w.Candidate__c}"/>
+                    <apex:column value="{!w.Date__c}"/>
+                    <apex:column value="{!w.Organization__c}"/>
+                    <apex:column value="{!w.Particular__c}"/>
+                    <apex:column value="{!w.Duration_hrs1__c}"/>
+                    <apex:column value="{!w.Organization2__c}"/>
+                    <apex:column value="{!w.Particular2__c}"/>
+                    <apex:column value="{!w.Duration_hrs2__c}"/>
+                    <apex:column value="{!w.Total_Hours_Dailly__c}"/>
+                </apex:pageBlockTable>
+  </apex:pageBlock>   --> 
+  <apex:commandButton value="Add Timesheet" action="{!add}"/> 
+  <apex:commandButton value="View Weekly Timesheet" action="{!gen}"/>
+  <table align="center" id="customers">
+      <caption style="font-size:20px;">All Timesheets</caption>
+       <tr>
+         <!-- <th>Candidate</th>--><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Date</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Organization</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Particular</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Duration(hrs)</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Organization</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Particular</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Duration(hrs)</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Total Hours(Dailly)</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          
+       </tr>
+      <apex:repeat value="{!wks}" var="w"><tr>
+         <!-- <td>{!w.Candidate__c}</td>--><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!w.Date__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!w.Organization__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!w.Particular__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!w.Duration_hrs1__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!w.Organization2__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!w.Particular2__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!w.Duration_hrs2__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!w.Total_Hours_Dailly__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          
+          
+         </tr>
+      </apex:repeat> 
+  </table>  
+     </body>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Only active settings have their audio played. Deactivate or delete a setting to prevent it from firing when its criteria is met.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Only active settings have their audio played. Deactivate or delete a setting to prevent it from firing when its criteria is met.</inlineHelpText>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Audio_Static_Resource_Path__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If the static resource is the audio file, enter just the resource's name (e.g. gong). If the static resource is a zip file, enter the resource's name and path within it to the audio file, including extension (e.g. sounds/sales/gong.mp3).</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>If the static resource is the audio file, enter just the resource's name (e.g. gong). If the static resource is a zip file, enter the resource's name and path within it to the audio file, including extension (e.g. sounds/sales/gong.mp3).</inlineHelpText>
+        <label>Audio Static Resource Path</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Field_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field whose value to monitor to know when to play the audio clip.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>The field whose value to monitor to know when to play the audio clip. Not used if the audio plays for "Validation Error" as that matches on the error message not the field value.</inlineHelpText>
+        <label>Field Name</label>
+        <metadataRelationshipControllingField>Trailshred_Setting__mdt.Object_Name__c</metadataRelationshipControllingField>
+        <referenceTo>FieldDefinition</referenceTo>
+        <relationshipLabel>Trailshred_Settings</relationshipLabel>
+        <relationshipName>Trailshred_Settings</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Field_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field value when to play the audio clip.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>The field value when to play the audio clip. Not used if the audio plays for "Validation Error" as that matches on the error message not the field value.</inlineHelpText>
+        <label>Field Value</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Object_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Determines which record form the settings apply to.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Determines which record form the settings apply to.</inlineHelpText>
+        <label>Object Name</label>
+        <referenceTo>EntityDefinition</referenceTo>
+        <relationshipLabel>Trailshred_Settings</relationshipLabel>
+        <relationshipName>Trailshred_Settings</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <description>Define audio clips to play when users update records to specific values.</description>
+    <label>Trailshred Setting</label>
+    <pluralLabel>Trailshred Settings</pluralLabel>
+    <visibility>Public</visibility>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>Active__c</columns>
+        <columns>Audio_Static_Resource_Path__c</columns>
+        <columns>Object_Name__c</columns>
+        <columns>Field_Name__c</columns>
+        <columns>Field_Value__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

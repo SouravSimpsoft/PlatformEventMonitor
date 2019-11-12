@@ -1,0 +1,20 @@
+<apex:page standardController="Weeksheet__c" extensions="sbpage">
+<apex:form >
+    <apex:pageBlock title="Weekly Timesheet">
+        <apex:pageBlockSection columns="4" title="Monday">
+            <apex:inputField value="{!Weeksheet__c.Organization__c}" id="dt">
+                <apex:actionSupport event="onchange" action="{!spage}"/>
+            </apex:inputField>
+              <apex:pageBlockTable value="{!conts}" var="cont" rows="10" columns="6">
+                  <apex:column value="{!cont.Organization__c}"/>
+                  <apex:column value="{!cont.Particular__c}"/>
+                  <apex:column value="{!cont.Duration_hrs1__c}"/>
+                  <apex:column value="{!cont.Organization2__c}"/>
+                  <apex:column value="{!cont.Particular2__c}"/>
+                  <apex:column value="{!cont.Duration_hrs2__c}"/>
+              </apex:pageBlockTable>
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+ </apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page controller="v6" docType="html-5.0">
+    <apex:form >
+        <apex:input type="number" value="{!a}" label="A" />
+        <apex:input type="number" value="{!b}" label="B" />
+        <apex:commandButton value="Add" action="{!add}"/>
+    </apex:form>
+    <apex:outputText value="{!c}"></apex:outputText>
+</apex:page>

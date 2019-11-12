@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Required</masterLabel>
+            <translation><!-- Not Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Criticality --></label>
+        <name>Criticality1__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Criticality --></label>
+        <name>Criticality2__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Criticality --></label>
+        <name>Criticality3__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Criticality --></label>
+        <name>Criticality4__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Criticality --></label>
+        <name>Criticality5__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration(hrs) --></label>
+        <name>Duration_hrs1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration(hrs) --></label>
+        <name>Duration_hrs2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration(hrs) --></label>
+        <name>Duration_hrs3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration(hrs) --></label>
+        <name>Duration_hrs4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration(hrs) --></label>
+        <name>Duration_hrs5__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>End_Time1__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>End_Time2__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>End_Time3__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>End_Time4__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>End_Time5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>Start_Time1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>Start_Time2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>Start_Time3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>Start_Time4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>Start_Time5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task --></label>
+        <name>Task1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task --></label>
+        <name>Task2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task --></label>
+        <name>Task3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task --></label>
+        <name>Task4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task --></label>
+        <name>Task5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week End(Friday) --></label>
+        <name>Week_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Start(Monday) --></label>
+        <name>Week_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- a --></label>
+        <name>a__c</name>
+    </fields>
+    <fields>
+        <label><!-- b --></label>
+        <name>b__c</name>
+    </fields>
+    <fields>
+        <label><!-- c --></label>
+        <name>c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Hours(Weekly) --></label>
+        <name>dur__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Timesheet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Timesheets</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Timesheet Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Friday --></label>
+            <section>Friday</section>
+        </sections>
+        <sections>
+            <label><!-- Monday --></label>
+            <section>Monday</section>
+        </sections>
+        <sections>
+            <label><!-- Thursday --></label>
+            <section>Thursday</section>
+        </sections>
+        <sections>
+            <label><!-- Tuesday --></label>
+            <section>Tuesday</section>
+        </sections>
+        <sections>
+            <label><!-- Wednesday --></label>
+            <section>Wednesday</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Day Should be Monday --></errorMessage>
+        <name>Rule1</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (Error in Friday)
+Can&apos;t go back before of previous week OR can&apos;t go to Tomorrow --></errorMessage>
+        <name>Rule10</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End time should greater than Start time --></errorMessage>
+        <name>Rule11</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (Error in Monday)
+Can&apos;t go back before of previous week OR can&apos;t go to Tomorrow --></errorMessage>
+        <name>Rule2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End time should greater than Start time --></errorMessage>
+        <name>Rule21</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Day Should be Tuesday --></errorMessage>
+        <name>Rule3</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End time should greater than Start time --></errorMessage>
+        <name>Rule31</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (Error in Tuesday)
+Can&apos;t go back before of previous week OR can&apos;t go to Tomorrow --></errorMessage>
+        <name>Rule4</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End time should greater than Start time --></errorMessage>
+        <name>Rule41</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Day Should be Wednesday --></errorMessage>
+        <name>Rule5</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- End time should greater than Start time --></errorMessage>
+        <name>Rule51</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (Error in Wednesday)
+Can&apos;t go back before of previous week OR can&apos;t go to Tomorrow --></errorMessage>
+        <name>Rule6</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Day Should be Monday Thursday --></errorMessage>
+        <name>Rule7</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (Error in Thursday)
+Can&apos;t go back before of previous week OR can&apos;t go to Tomorrow --></errorMessage>
+        <name>Rule8</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Day Should be Friday --></errorMessage>
+        <name>Rule9</name>
+    </validationRules>
+</CustomObjectTranslation>

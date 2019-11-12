@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Only active settings have their audio played. Deactivate or delete a setting to prevent it from firing when its criteria is met. --></help>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- If the static resource is the audio file, enter just the resource&apos;s name (e.g. gong). If the static resource is a zip file, enter the resource&apos;s name and path within it to the audio file, including extension (e.g. sounds/sales/gong.mp3). --></help>
+        <label><!-- Audio Static Resource Path --></label>
+        <name>Audio_Static_Resource_Path__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field whose value to monitor to know when to play the audio clip. Not used if the audio plays for &quot;Validation Error&quot; as that matches on the error message not the field value. --></help>
+        <label><!-- Field Name --></label>
+        <name>Field_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field value when to play the audio clip. Not used if the audio plays for &quot;Validation Error&quot; as that matches on the error message not the field value. --></help>
+        <label><!-- Field Value --></label>
+        <name>Field_Value__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines which record form the settings apply to. --></help>
+        <label><!-- Object Name --></label>
+        <name>Object_Name__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Trailshred Setting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Trailshred Settings</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Trailshred Setting Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

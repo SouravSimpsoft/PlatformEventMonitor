@@ -1,0 +1,46 @@
+<apex:page docType="html-5.0" controller="v5" sidebar="false" showHeader="false">
+  <head>
+      <style>
+      
+          input[type=text]
+          {
+               border-radius:10px;
+               background-color:lightblue;
+          }
+          input[type=text]:focus
+          {
+               border-color:dodgerBlue;
+               box-shadow:0 0 8px 0 dodgerBlue;
+          }
+          body 
+          {
+              background-color: rgba(255, 204, 255);
+          }
+          #pos1
+          {
+              border: 1px solid purple;
+              border-style: solid;
+              border-color: rgba(153, 0, 153);
+              box-shadow: 0 0 8px 8px rgba(153, 0, 153, 0.3), 0 0 6px 8px rgba(153, 0, 153, 0.19);
+              background-color: rgba(153, 0, 153, 0.7);
+              margin-top : 150px;
+              margin-left : 570px;
+              width:300px;
+              height:auto;
+              color: white;
+              border-radius:50px;
+              font-family: 'Comic Sans MS';
+          }
+      </style>
+  </head>
+  
+  <div id="pos1"><apex:form >
+      <br></br><p align="center">Addition</p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number1&nbsp;&nbsp;&nbsp;&nbsp;<apex:input type="text" value="{!num1}" label="Number1"/><br></br><br></br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number2&nbsp;&nbsp;&nbsp;&nbsp;<apex:input type="text" value="{!num2}" label="Number2"/><br></br><br></br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number3&nbsp;&nbsp;&nbsp;&nbsp;<apex:input type="text" value="{!num3}" label="Number3"/><br></br><br></br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number4&nbsp;&nbsp;&nbsp;&nbsp;<apex:input type="text" value="{!num4}" label="Number4"/><br></br><br></br>
+      <div align="center"><apex:commandButton value="Adding" action="{!add}"/></div><br></br>
+  </apex:form>
+  </div>
+</apex:page>

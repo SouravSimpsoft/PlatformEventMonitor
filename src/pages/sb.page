@@ -1,0 +1,101 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false" StandardController="Weeksheet__c" extensions="generatetimesheet,paging" >
+<head>
+<style>
+
+    
+  #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #3333ff;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #001B36;
+  color: white;
+}
+
+
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #001B36;
+  top: 150px;
+  position: realative;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(0,27,30,0.4);
+}
+.active {
+  background-color: #4CAF50;
+}
+body {
+  background-image: url("https://c.ap8.visual.force.com/resource/1555481834000/background_gradient");
+}
+</style>
+</head>
+<apex:form >
+    <body>
+<img src="https://c.ap8.visual.force.com/resource/1553759227000/demo1" alt="logo"/>
+<ul>
+    <li><apex:commandLink value="Home" action="{!home}"/></li>
+    <li><apex:commandLink value="Profile" action="{!profile}"/></li>
+    <li><apex:commandLink value="Timesheet" action="{!timesheet}"/></li>
+    <li><apex:commandLink value="Expence" action="{!expence}"/></li>
+    <li><apex:commandLink action="{!out}" value="Log out!"/></li>
+</ul>
+    
+    <apex:outputText value="{!data2}"></apex:outputText>
+    <apex:outputText value="{!data}"></apex:outputText>
+    <apex:outputText value="{!data3}"></apex:outputText>
+    <apex:pageBlock title="Weekly Timesheet">
+       <apex:pageBlockSection >
+            <apex:input type="date" value="{!date1}" label="Enter Week Start Date:"/>
+            <apex:commandButton value="Generate" action="{!generate}"/>
+       </apex:pageBlockSection>
+       <apex:pageBlockSection columns="4" title="Monday">
+            
+        </apex:pageBlockSection>
+        <apex:outputPanel id="ajaxrequest">
+        <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!conts}" var="cont"   rows="10" columns="7">
+                  <apex:column value="{!cont.Date__c}"/>
+                  <apex:column value="{!cont.Organization__c}"/>
+                  <apex:column value="{!cont.Particular__c}"/>
+                  <apex:column value="{!cont.Duration_hrs1__c}"/>
+                  <apex:column value="{!cont.Organization2__c}"/>
+                  <apex:column value="{!cont.Particular2__c}"/>
+                  <apex:column value="{!cont.Duration_hrs2__c}"/>
+              </apex:pageBlockTable>
+        </apex:pageBlockSection>
+        </apex:outputPanel>
+    </apex:pageBlock>
+    </body>
+ </apex:form>
+</apex:page>

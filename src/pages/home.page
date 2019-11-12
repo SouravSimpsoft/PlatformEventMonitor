@@ -1,0 +1,49 @@
+<apex:page sidebar="false" showHeader="false" controller="paging" action="{!checklogout}">
+<head>
+<style>
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #001B36;
+  top: 150px;
+  position: realative;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(0,27,30,0.4);
+}
+.active {
+  background-color: #4CAF50;
+}
+body {
+  background-image: url("https://c.ap8.visual.force.com/resource/1555481834000/background_gradient");
+}
+</style>
+</head><apex:form >
+<body>
+<img src="https://c.ap8.visual.force.com/resource/1553759227000/demo1" alt="logo"/>
+<ul>
+    <li><apex:commandLink value="Home" action="{!home}"/></li>
+    <li><apex:commandLink value="Profile" action="{!profile}"/></li>
+    <li><apex:commandLink value="Timesheet" action="{!timesheet}"/></li>
+    <li><apex:commandLink value="Expence" action="{!expence}"/></li>
+    <li><apex:commandLink action="{!out}" value="Log out!"/></li>
+</ul>
+<p align="center" style="font-size:20px;">Welcome Home</p><!--,timecookie<apex:outputText value="{!data1}"></apex:outputText>-->
+
+</body></apex:form>
+</apex:page>

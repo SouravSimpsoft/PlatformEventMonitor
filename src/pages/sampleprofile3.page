@@ -1,0 +1,58 @@
+<apex:page standardController="Candidate__c" sidebar="false" showHeader="false" extensions="sampleupdate,paging" action="{!checklogout}">
+<head>
+<style>
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #001B36;
+  top: 150px;
+  position: realative;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(0,27,30,0.4);
+}
+.active {
+  background-color: #4CAF50;
+}
+
+</style></head>
+   <apex:form >
+   <body>
+<img src="https://c.ap8.visual.force.com/resource/1553759227000/demo1" alt="logo"/>
+<ul>
+    <li><apex:commandLink value="Home" action="{!home}"/></li>
+    <li><apex:commandLink value="Profile" action="{!profile}"/></li>
+    <li><apex:commandLink value="Timesheet" action="{!timesheet}"/></li>
+    <li><apex:commandLink value="Payment Voucher" action="{!expence}"/></li>
+    <li><apex:commandLink action="{!out}" value="Log out!"/></li>
+</ul>
+       <apex:pageBlock title="Edit">
+           <apex:pageBlockSection >
+               <apex:inputField value="{!Candidate__c.Personal_ID__c}"/>
+               <apex:inputField value="{!Candidate__c.First_Name__c}"/>
+               <apex:inputField value="{!Candidate__c.Last_Name__c}"/>
+               <apex:inputField value="{!Candidate__c.Email__c}"/>
+               <apex:inputField value="{!Candidate__c.Gender__c}"/>
+               <apex:inputField value="{!Candidate__c.Payroll_Entry__c}"/>
+               <apex:inputField value="{!Candidate__c.Password__c}"/>
+               <apex:inputField value="{!Candidate__c.Confirm_Password__c}"/>
+           </apex:pageBlockSection>
+           <apex:commandButton value="update" action="{!update2}"/>
+       </apex:pageBlock></body>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,108 @@
+<apex:page showHeader="false" sidebar="false" controller="paging1">
+  <head>
+  <style>
+          ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: #001B36;
+              top: 150px;
+              position: realative;
+            }
+
+            li {
+              float: left;
+            }
+
+            li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+
+            li a:hover:not(.active) {
+              background-color: rgba(0,27,30,0.4);
+            }
+            .active {
+              background-color: #4CAF50;
+            }
+          table, th {
+          border: 1px solid black;
+          border-collapse: collapse;
+          }
+          body {
+  background-image: url("https://c.ap8.visual.force.com/resource/1555481834000/background_gradient");
+}
+  </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#a").click(function(){
+    $("p").hide(1000);
+  });
+  $("#b").click(function(){
+    $("p").show(1000);
+  });
+});
+</script>
+</head><apex:form >
+<body>
+<img src="https://c.ap8.visual.force.com/resource/1553759227000/demo1" alt="logo"/>
+<ul>
+    <li><apex:commandLink value="Home" action="{!home}"/></li>
+    <li><apex:commandLink value="Employees" action="{!profile}"/></li>
+    <li><apex:commandLink value="Timesheet" action="{!timesheet}"/></li>
+    <li><apex:commandLink value="Payment Voucher" action="{!expence}"/></li>
+    
+</ul>
+<br></br>
+<table align="center" style="background-color: rgba(140,255,255,0.5);">
+     <caption style="font-size:28px; color:rgba(0,0,0);">Payment Voucher</caption>
+     <tr><td></td></tr><tr><td></td></tr>
+     <tr>
+            <td align="left">&nbsp;&nbsp;&nbsp;To:&nbsp;&nbsp;&nbsp;<apex:inputText label="To"/></td>
+            <td align="left">Date:&nbsp;&nbsp;&nbsp;<apex:inputText label="Date"/></td>
+     </tr>
+     <tr><td></td></tr><tr><td></td></tr>
+     <tr><td>&nbsp;&nbsp;&nbsp;Payment Method:</td></tr>
+    <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;<input type="radio" name="a" value="cash" id="a"/>Cash
+                <input type="radio" name="a" value="cheque" id="b"/>Cheque<br></br>
+            </td>
+    </tr>
+    <tr>
+            <td>
+                 <p>
+                                &nbsp;&nbsp;&nbsp;Account No.&nbsp;&nbsp;&nbsp;<input type="text" value="1"/>&nbsp;&nbsp;&nbsp;
+                                IFSC Code:&nbsp;&nbsp;&nbsp;<input type="text" value="2" />
+                 </p>
+            </td>
+    </tr>
+    <tr>
+            <td> 
+                 &nbsp;&nbsp;&nbsp;Amount:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<apex:inputText label="Amount"/>
+            
+                &nbsp;&nbsp;&nbsp;The Sum of:&nbsp;&nbsp;&nbsp;<apex:inputText label="Sum"/>
+            </td>
+    </tr>
+    <tr>
+       <td></td></tr><tr><td></td>
+    </tr>
+    <tr><td></td></tr><tr><td></td></tr>
+    <tr>
+         <td align="left">
+              &nbsp;&nbsp;&nbsp;Being:&nbsp;&nbsp;&nbsp;<apex:inputTextarea label="Being"/>
+         </td>
+         <td align="left">
+              Payee:&nbsp;&nbsp;&nbsp;<apex:inputText label="Payee"/>&nbsp;&nbsp;&nbsp;
+         </td>
+     </tr>
+     <tr><td></td></tr><tr><td></td></tr>
+</table>
+</body>
+</apex:form>
+</apex:page>

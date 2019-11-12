@@ -1,0 +1,10 @@
+<apex:page controller="sampletable">
+    <apex:form >
+        <apex:commandButton value="Show data" action="{!test}"/> 
+        <apex:pageBlock >
+            <apex:pageblockTable value="{!fstName}" var="f">
+                <apex:column value="{!f}"/>
+            </apex:pageblockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

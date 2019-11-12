@@ -1,0 +1,10 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false" controller="cookie1">
+  <apex:form >
+      <apex:pageBlock >
+          <apex:pageBlockSection >
+              <apex:input type="text" value="{!name}"/>
+              <apex:commandButton action="{!send}" value="Go!"/>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

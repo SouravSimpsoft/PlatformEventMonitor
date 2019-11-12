@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CEO</fullName>
+        <default>false</default>
+        <label>CEO</label>
+    </customValue>
+    <customValue>
+        <fullName>CHAIRMAN</fullName>
+        <default>false</default>
+        <label>CHAIRMAN</label>
+    </customValue>
+    <customValue>
+        <fullName>DEVELOPER</fullName>
+        <default>false</default>
+        <label>DEVELOPER</label>
+    </customValue>
+    <customValue>
+        <fullName>HR</fullName>
+        <default>false</default>
+        <label>HR</label>
+    </customValue>
+    <customValue>
+        <fullName>MANAGER</fullName>
+        <default>false</default>
+        <label>MANAGER</label>
+    </customValue>
+    <customValue>
+        <fullName>TECHNICIAN</fullName>
+        <default>false</default>
+        <label>TECHNICIAN</label>
+    </customValue>
+    <customValue>
+        <fullName>TESTER</fullName>
+        <default>false</default>
+        <label>TESTER</label>
+    </customValue>
+    <customValue>
+        <fullName>INTERN</fullName>
+        <default>false</default>
+        <label>INTERN</label>
+    </customValue>
+    <masterLabel>Employee Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

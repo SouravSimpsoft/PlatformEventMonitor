@@ -1,0 +1,90 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardController="Weeksheet__c" extensions="addsheet2,paging1">
+<head>
+<style>
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #001B36;
+  top: 150px;
+  position: realative;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(0,27,30,0.4);
+}
+.active {
+  background-color: #4CAF50;
+}
+
+</style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <script>
+         function sum()
+         {
+             
+             var dt1 = document.getElementById('{!$Component.fm.pb.pbs.t1}').value;
+             var dt2 = document.getElementById('{!$Component.fm.pb.pbs.t2}').value;
+             var dt3 = parseFloat( dt2 );
+             var sm1 =  parseFloat( dt1 ) + dt3;
+             if(isNaN(sm1))
+             {
+                 alert("Fill the second one!!!");
+             }
+             else
+             {
+                 
+                 if(sm1<9)
+                 {
+                     alert("Your Daily working hours is less than 9! Please check before save!!!");
+                     document.getElementById("dk").innerHTML = sm1;
+                 }
+                 else
+                 {
+                     alert("Good job!!You have completed your daily milestone!!!");
+                     document.getElementById("dk").innerHTML = sm1;
+                 }
+             }
+         }
+         
+   </script></head><apex:form id="fm"><body>
+<img src="https://c.ap8.visual.force.com/resource/1553759227000/demo1" alt="logo"/>
+<ul>
+    <li><apex:commandLink value="Home" action="{!home}"/></li>
+    <li><apex:commandLink value="Employees" action="{!profile}"/></li>
+    <li><apex:commandLink value="Timesheet" action="{!timesheet}"/></li>
+    <li><apex:commandLink value="Payment Voucher" action="{!expence}"/></li>
+</ul>
+
+      <apex:pageBlock title="Here you can fill the Daily Timesheet" id="pb">
+          <apex:pageBlockSection columns="4" title="Timesheet" id="pbs">
+                  <apex:inputField value="{!Weeksheet__c.Date__c}"/>
+                  <apex:inputField value="{!Weeksheet__c.Organization__c}"/>
+                  <apex:inputField value="{!Weeksheet__c.Particular__c}"/>
+                  <apex:inputField value="{!Weeksheet__c.Duration_hrs1__c}" id="t1" onchange="sum()"/>
+                  <apex:pageBlockSectionItem > </apex:pageBlockSectionItem>
+                  <apex:inputField value="{!Weeksheet__c.Organization2__c}"/>
+                  <apex:inputField value="{!Weeksheet__c.Particular2__c}" />
+                  <apex:inputField value="{!Weeksheet__c.Duration_hrs2__c}" id="t2" onchange="sum()"/>
+                  <apex:pageBlockSectionItem >Total Daily Working Hours<p id="dk"></p></apex:pageBlockSectionItem>
+                  
+          </apex:pageBlockSection>
+          <div align="center" draggable="false" >
+              <apex:commandButton value="save" action="{!save}"/>
+          </div>
+      </apex:pageBlock></body>
+   </apex:form> 
+</apex:page>

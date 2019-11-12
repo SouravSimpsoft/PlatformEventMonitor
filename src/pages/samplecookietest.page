@@ -1,0 +1,5 @@
+<apex:page showHeader="false" sidebar="false" standardController="Weeksheet__c" extensions="cookiecontroller">
+  <apex:form >
+      <apex:outputText value="{!cookiedata}"></apex:outputText>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,121 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false">
+        <head lang="en">
+            <style>
+          .signupBox{
+                width: auto;
+                height: auto;
+                text-align: center;
+                margin:0 auto;
+                background-color: rgba(128,255,255,0.4);
+                border-radius: 20px;
+                margin:0 auto;
+                margin-top: 30px;
+                }
+          div.pos7 {
+                position:absolute;
+                top:80px;
+                left: 450px;
+                }
+      </style>
+        </head>
+      <body background="https://cdn-images-1.medium.com/max/1200/1*CvjclMDwgh9AqED_h5UVCA.jpeg"/>
+          <apex:form >
+    <div class="pos7">
+      <div class="signupBox">
+        <p align="center"><font size="6" style="color:#3136C9">Payment Voucher</font></p>
+
+    <table>
+            
+            <tr>
+
+                 <td align="left"><b>Name</b></td>
+
+                 <td><input type="text" id="id" required="true"/></td>
+
+            </tr>
+            <tr>
+                <td align="left"><b>Gender</b></td>
+                                    <td align="left"><select id="dropdown">
+                                      <option value = "Male">Male</option>
+                                      <option value = "Female">Female</option>
+                                      <option value = "Transgender">Transgender</option>
+                                   </select></td>
+            </tr>
+            <tr>
+
+                 <td align="left"><b>Date of Birth</b></td>
+
+                 <td align="left"><apex:input type="text"  id="bdate" required="true"/></td>
+
+            </tr>
+            <tr>
+
+                 <td align="left"><b>Address</b></td>
+
+                 <td><input type="text" id="address" required="true"/></td>
+
+            </tr>
+
+            <tr>
+
+                 <td align="left"><b>E-mail</b></td>
+
+                 <td><input type="email" id="email" required="true"/></td>
+
+            </tr>
+
+            <tr>
+
+                 <td align="left"><b>mobile No.</b></td>
+
+                 <td><input type="text" id="Mob" required="true"/></td>
+
+            </tr>
+
+            <tr>
+
+                 <td align="left"><b>Password</b></td>
+
+                 <td><input type="password" id="password" required="true"/></td>
+
+            </tr>
+
+            <tr>
+
+                 <td align="left"><b>Confirm Password</b></td>
+
+                 <td><input type="password" id="password1" required="true"/></td>
+
+            </tr>
+            <tr>
+                <td align="left"><b>Choose profile picture</b></td>
+            </tr>
+            <tr>
+                <td align="left"><input type="file" id="file" value="choosefile"/></td>
+            </tr>
+            <tr>
+
+                 <td align="left">
+
+                    <p><input type="checkbox" id="checkbox" value="check" required="true"/> 
+
+                    I have read and agree to the <a href="#">Terms and Conditions</a></p>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                 <td align="right"><input type="submit" value="sign up" id="regbtm"/></td>
+
+            </tr>
+
+    </table>
+
+    <p style="font-weight: 900">
+
+        Already a member? <a href="#">Log in</a>
+
+    </p></div></div></apex:form>
+</apex:page>

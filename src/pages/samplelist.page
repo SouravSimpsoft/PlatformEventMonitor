@@ -1,0 +1,61 @@
+<apex:page sidebar="false" showHeader="false" controller="recordlist">
+
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>  
+  <apex:form >  
+   <body>
+       <table style="width:100%;" id="customers">
+           <tr style="display:table-row;">
+               <th>WeekSheet ID</th>
+               <th>Candidate</th>
+               <th>Date</th>
+               <th>Organization</th>
+               <th>Particular</th>
+               <th>Duration(hrs)</th>
+               <th>Organization</th>
+               <th>Particular</th>
+               <th>Duration(hrs)</th>
+               <th>Total Hours(Dailly)</th>
+           </tr>
+           <apex:repeat value="{!wks}" var="w">
+               <tr>
+                   <td>{!w.Name}</td>
+                   <td>{!w.Candidate__c}</td>
+                   <td>{!w.Date__c}</td>
+                   <td>{!w.Organization__c}</td>
+                   <td>{!w.Particular__c}</td>
+                   <td>{!w.Duration_hrs1__c}</td>
+                   <td>{!w.Organization2__c}</td>
+                   <td>{!w.Particular2__c}</td>
+                   <td>{!w.Duration_hrs2__c}</td>
+                   <td>{!w.Total_Hours_Dailly__c}</td>
+               </tr>
+           </apex:repeat>
+       </table>
+</body>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="cookie3">
+<head>
+    <script type="text/javascript">
+    window.setTimeout("redirectpage();", 5000);    
+    function redirectpage(){
+    window.top.location.href = 'https://c.ap8.visual.force.com/apex/co1';
+    }
+</script>
+</head>
+  <apex:form >
+      <apex:outputText value="{!data}"></apex:outputText>
+  </apex:form>
+</apex:page>

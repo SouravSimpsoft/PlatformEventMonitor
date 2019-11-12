@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>connect2sdas@outlook.com</contactEmail>
+    <label>AdvanREST Client</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:8080</callbackUrl>
+        
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

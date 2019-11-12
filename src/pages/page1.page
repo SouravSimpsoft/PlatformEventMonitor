@@ -1,0 +1,18 @@
+<apex:page standardController="Employee__c" extensions="ext1,ext2">
+    <apex:form >
+            <apex:pageBlock title="Add Information">
+            	<apex:pageBlockSection >
+        			<apex:inputField value="{!cds.First_Name__c}"/>
+            		<apex:inputField value="{!cds.Last_Name__c}"/>
+        		</apex:pageBlockSection>
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlock>
+    </apex:form>
+     <apex:pageBlock title="Employee Informations">
+                <apex:pageBlockTable value="{!emp}" var="e">
+                    <apex:column value="{!e.Name}"/>
+                    <apex:column value="{!e.First_Name__c}"/>
+                    <apex:column value="{!e.Last_Name__c}"/>
+                </apex:pageBlockTable>
+      </apex:pageBlock>
+</apex:page>

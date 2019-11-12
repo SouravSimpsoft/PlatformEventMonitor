@@ -1,0 +1,56 @@
+<apex:page sidebar="false" showHeader="false" >
+<style>
+*{
+margin:0px;
+padding:0px;
+}
+#container ul{
+list-style:none;
+}
+
+#container ul li{
+background-color:#3C3E94;
+width:150px;
+height:50px;
+line-height:50px;
+text-align:center;
+float:left;
+color:white;
+font-size:18px;
+position:relative;
+border:1px solid white;
+}
+#container ul li:hover{
+background-color:#11A5CA;
+}
+#container ul li ul{
+display:none;
+float: none;
+position:absolute;
+background-color:#BAEBF7;
+padding:8px;
+}
+#container ul li:hover > ul{
+
+display:block;
+}
+</style>
+    <apex:image width="50" height="50" url="data:image/png;base64,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" alt="Description of image here"/>
+    <div id="container" class="navbar">
+        <ul>
+            <li>Eemployees
+                <ul>
+                    <li>Add</li>
+                    <li>View</li>
+                </ul>
+            </li>
+            <li>Timesheets
+                <ul>
+                    <li>Add</li>
+                    <li>View</li>
+                </ul>
+             </li>
+            <li>Payroll</li>
+        </ul>
+    </div>
+</apex:page>

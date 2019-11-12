@@ -1,0 +1,20 @@
+<apex:page standardController="Addition__c" >
+    <apex:form >
+            <apex:pageBlock title="Add Numbers">
+                <apex:pageBlockSection >
+                    <apex:inputField value="{!Addition__c.Number1__c}"/>
+                    <apex:inputField value="{!Addition__c.Number2__c}"/>
+                    <apex:commandButton value="Tab" onclick="tab()" immediate="true"/>
+                </apex:pageBlockSection>
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlock>
+    </apex:form>
+    <script>
+        function tab()
+        {   
+                document.write("Hello World");
+                document.write("<apex:form ><apex:inputField value="{!Addition__c.Number1_2__c}"/></apex:form>");
+            
+        }
+    </script>
+</apex:page>

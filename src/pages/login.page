@@ -1,0 +1,80 @@
+<!--<apex:page docType="html-5.0" sidebar="false" showHeader="false" standardController="Candidate__c" extensions="login">
+      <head>
+      
+      </head>
+      <body><img src="https://c.ap8.visual.force.com/resource/1553759227000/demo1" alt="logo"/>
+          <apex:form >
+            <apex:pageBlock title="Log in Here">
+               <apex:pageBlockSection columns="1">
+                    <apex:input type="email" value="{!email}" label="Enter E-mail:"/>
+                    <apex:input type="text" value="{!pass}" label="Enter Password:"/>
+                    <apex:commandButton value="Log In" action="{!loging}"/>
+               </apex:pageBlockSection>
+            </apex:pageBlock>
+         </apex:form>
+      
+      </body>
+</apex:page>-->
+
+<apex:page docType="html-5.0" sidebar="false" showHeader="false" standardController="Candidate__c" extensions="login">
+      <head>
+          <style>
+           input[type=text]
+           {
+               border-radius:4px;
+               background-color:#ffff66;
+           }
+           input[type=text]:focus
+           {
+               border-color:dodgerBlue;
+               box-shadow:0 0 8px 0 dodgerBlue;
+           }
+           input[type=email]
+           {
+               border-radius:4px;
+               background-color:#ffff66;
+           }
+           input[type=email]:focus
+           {
+               border-color:dodgerBlue;
+               box-shadow:0 0 8px 0 dodgerBlue;
+           }
+                  div.polaroid {
+          width: 300px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          text-align: center;
+          border-radius:15px;
+        }   
+        body {
+          background-image: url("https://c.ap8.visual.force.com/resource/1555481834000/background_gradient");
+        }
+          
+          </style>
+          
+    
+      </head>
+      <body><img src="https://c.ap8.visual.force.com/resource/1553759227000/demo1" alt="logo"/><p align="center" style="font-size:50px;">Employee Login</p>
+          <div align="center" style="margin-top:80px;">
+         <div class="polaroid"> 
+          <apex:form >
+            <table align="center" style="padding:20px;">
+               <caption style="font-size:20px;">Log in Here</caption>
+               <tr>
+                    <td>E-mail:</td><td><apex:input type="email" value="{!email}" label="Enter E-mail:" html-placeholder="E-mail"/></td>
+               </tr>
+               <tr>
+                   <td>Password:</td><td><apex:input type="text" value="{!pass}" label="Enter Password:" html-placeholder="Password"/></td>
+                   <!--<td><apex:inputSecret value="{!pass}"/></td>-->
+               </tr>
+               <tr>
+                    <td><apex:commandLink value="are you Admin?" action="{!loging3}"/></td>
+               </tr>
+               <tr>
+                    <td align="right"><apex:commandButton value="Log In" action="{!loging}"/></td>
+               </tr>
+             </table>  
+         </apex:form>
+       </div></div>
+      
+      </body>
+</apex:page>

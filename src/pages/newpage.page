@@ -1,0 +1,13 @@
+<apex:page controller="rowlock">
+    <apex:form id="form">
+        <script>
+            addEventListener("load", function()
+            {
+                
+                updateAccount();
+                <!--updateAccount();-->
+            }, true);
+        </script>
+        <apex:actionFunction name="updateAccount" action="{!updateAccount}" reRender="form"/>
+    </apex:form>
+</apex:page>

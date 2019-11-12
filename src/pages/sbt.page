@@ -1,0 +1,89 @@
+<apex:page showHeader="false" sidebar="false" StandardController="Weeksheet__c" extensions="generatetimesheet">
+<style>
+
+.h1 
+{ 
+    display: block;font-size: 1.2em;
+    font-weight: bold;
+    border: 1px solid black;
+}
+.rules_form2 * {
+   background-color:#00cc00;
+           color: white; 
+      
+    font-size:13px;
+   
+}
+</style>
+   <apex:form >
+       <apex:pageblock title="Week Timesheet">
+           <apex:commandButton value="Back" action="{!back}"/>
+           <apex:outputPanel id="ajaxrequest">
+                <apex:pageBlockSection title="Monday">
+                    <apex:pageBlockTable value="{!conts}" var="cont"   rows="10" columns="8">
+                      <apex:column value="{!cont.Date__c}"/>
+                      <apex:column value="{!cont.Organization__c}"/>
+                      <apex:column value="{!cont.Particular__c}"/>
+                      <apex:column value="{!cont.Duration_hrs1__c}"/>
+                      <apex:column value="{!cont.Organization2__c}"/>
+                      <apex:column value="{!cont.Particular2__c}"/>
+                      <apex:column value="{!cont.Duration_hrs2__c}"/>
+                      <apex:column value="{!cont.Total_Hours_Dailly__c}"/>
+                  </apex:pageBlockTable>
+                </apex:pageBlockSection>
+          </apex:outputPanel>
+          
+          <apex:pageBlockSection title="Tuesday">
+                    <apex:pageBlockTable value="{!conts1}" var="cont1"   rows="10" columns="8">
+                      <apex:column value="{!cont1.Date__c}"/>
+                      <apex:column value="{!cont1.Organization__c}"/>
+                      <apex:column value="{!cont1.Particular__c}"/>
+                      <apex:column value="{!cont1.Duration_hrs1__c}"/>
+                      <apex:column value="{!cont1.Organization2__c}"/>
+                      <apex:column value="{!cont1.Particular2__c}"/>
+                      <apex:column value="{!cont1.Duration_hrs2__c}"/>
+                      <apex:column value="{!cont1.Total_Hours_Dailly__c}"/>
+                  </apex:pageBlockTable>
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Wednesday">
+                    <apex:pageBlockTable value="{!wed}" var="w"   rows="10" columns="8">
+                      <apex:column value="{!w.Date__c}"/>
+                      <apex:column value="{!w.Organization__c}"/>
+                      <apex:column value="{!w.Particular__c}"/>
+                      <apex:column value="{!w.Duration_hrs1__c}"/>
+                      <apex:column value="{!w.Organization2__c}"/>
+                      <apex:column value="{!w.Particular2__c}"/>
+                      <apex:column value="{!w.Duration_hrs2__c}"/>
+                      <apex:column value="{!w.Total_Hours_Dailly__c}"/>
+                  </apex:pageBlockTable>
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Thursday">
+                    <apex:pageBlockTable value="{!thurs}" var="th"   rows="10" columns="8">
+                      <apex:column value="{!th.Date__c}"/>
+                      <apex:column value="{!th.Organization__c}"/>
+                      <apex:column value="{!th.Particular__c}"/>
+                      <apex:column value="{!th.Duration_hrs1__c}"/>
+                      <apex:column value="{!th.Organization2__c}"/>
+                      <apex:column value="{!th.Particular2__c}"/>
+                      <apex:column value="{!th.Duration_hrs2__c}"/>
+                      <apex:column value="{!th.Total_Hours_Dailly__c}"/>
+                  </apex:pageBlockTable>
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Friday">
+                    <apex:pageBlockTable value="{!fri}" var="f"   rows="10" columns="8">
+                      <apex:column value="{!f.Date__c}"/>
+                      <apex:column value="{!f.Organization__c}"/>
+                      <apex:column value="{!f.Particular__c}"/>
+                      <apex:column value="{!f.Duration_hrs1__c}"/>
+                      <apex:column value="{!f.Organization2__c}"/>
+                      <apex:column value="{!f.Particular2__c}"/>
+                      <apex:column value="{!f.Duration_hrs2__c}"/>
+                      <apex:column value="{!f.Total_Hours_Dailly__c}"/>
+                  </apex:pageBlockTable>
+          </apex:pageBlockSection>
+       </apex:pageblock>
+   </apex:form>
+</apex:page>

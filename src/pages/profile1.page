@@ -1,0 +1,106 @@
+<apex:page sidebar="false" showHeader="false" controller="paging1" extensions="profile1">
+<head>
+<style>0
+ 
+ #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #3333ff;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #001B36;
+  color: white;
+}
+  
+  
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #001B36;
+  top: 150px;
+  position: realative;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(0,27,30,0.4);
+}
+.active {
+  background-color: #4CAF50;
+}
+body {
+  background-image: url("https://c.ap8.visual.force.com/resource/1555481834000/background_gradient");
+}
+</style>
+</head>
+<apex:form ><body>
+<img src="https://c.ap8.visual.force.com/resource/1553759227000/demo1" alt="logo"/>
+<ul>
+    <li><apex:commandLink value="Home" action="{!home}"/></li>
+    <li><apex:commandLink value="Employees" action="{!profile}"/></li>
+    <li><apex:commandLink value="Timesheet" action="{!timesheet}"/></li>
+    <li><apex:commandLink value="Payment Voucher" action="{!expence}"/></li>
+</ul>
+<!--
+ <apex:pageBlock title="All Employees">
+         <apex:pageBlockTable value="{!emp}" var="e">
+                    <apex:column value="{!e.Name}"/>
+                    <apex:column value="{!e.Email__c}"/>
+                    <apex:column value="{!e.Gender__c}"/> 
+        </apex:pageBlockTable> 
+  </apex:pageBlock> -->
+  <table align="center" id="customers">
+  <caption style="font-size:20px;">All Employees</caption>
+      <tr>
+          <th>SFDC ID</th>
+          <th>Personal ID</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>First Name</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Last Name</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Role</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>E-mail</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Gender</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+          <th>Payroll Entry Name</th><!--<th>&nbsp;&nbsp;&nbsp;</th>-->
+      </tr>
+      <apex:repeat value="{!emp}" var="e">
+      <tr>
+          <td>{!e.ID}</td>
+          <td>{!e.Personal_ID__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!e.First_Name__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!e.Last_Name__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!e.Employee_Type__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!e.Email__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!e.Gender__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          <td>{!e.Payroll_Entry__c}</td><!--<td>&nbsp;&nbsp;&nbsp;</td>-->
+          
+      </tr>
+      </apex:repeat>
+  </table>    
+     </body>
+  </apex:form>
+</apex:page>

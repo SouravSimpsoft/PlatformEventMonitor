@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>commvalid</fullName>
+        <field>comment__c</field>
+        <formula>Name__c</formula>
+        <name>commvalid</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>commentvalidation</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Student__c.Name__c</field>
+            <operation>startsWith</operation>
+            <value>S</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Candidate --></label>
+        <name>Candidate__c</name>
+        <relationshipLabel><!-- Weeksheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration(hrs) --></label>
+        <name>Duration_hrs1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration(hrs) --></label>
+        <name>Duration_hrs2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organization --></label>
+        <name>Organization2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organization --></label>
+        <name>Organization__c</name>
+    </fields>
+    <fields>
+        <label><!-- Particular --></label>
+        <name>Particular2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Particular --></label>
+        <name>Particular__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Hours(Dailly) --></label>
+        <name>Total_Hours_Dailly__c</name>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Weeksheet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Weeksheets</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <layouts>
+        <layout>Weeksheet Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Daily Timesheet --></label>
+            <section>Daily Timesheet</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

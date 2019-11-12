@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Contact No --></label>
+        <name>Contact_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Festival --></label>
+        <name>Festival__c</name>
+        <relationshipLabel><!-- Attendees --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Number of purchased Tickets --></label>
+        <name>Number_of_purchased_Tickets__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purchase Date --></label>
+        <name>Purchase_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purchase Source --></label>
+        <name>Purchase_Source__c</name>
+        <picklistValues>
+            <masterLabel>Bookmyshow</masterLabel>
+            <translation><!-- Bookmyshow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Official Website</masterLabel>
+            <translation><!-- Official Website --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Site</masterLabel>
+            <translation><!-- Social Site --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Third Party Ticket Vendor</masterLabel>
+            <translation><!-- Third Party Ticket Vendor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ticket Type --></label>
+        <name>Ticket_Type__c</name>
+        <picklistValues>
+            <masterLabel>General</masterLabel>
+            <translation><!-- General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Premium</masterLabel>
+            <translation><!-- Premium --></translation>
+        </picklistValues>
+    </fields>
+    <caseValues>
+        <plural>false</plural>
+        <value>Attendees</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Attendees</value>
+    </caseValues>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

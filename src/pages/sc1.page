@@ -1,0 +1,62 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false">
+  <head>
+      
+      <style>
+          
+          input[type=text]
+          {
+               border-radius:10px;
+               background-color:lightblue;
+          }
+          input[type=text]:focus
+          {
+               border-color:dodgerBlue;
+               box-shadow:0 0 8px 0 dodgerBlue;
+          }
+          body 
+          {
+              background-color: lightblue;
+          }
+          #pos1
+          {
+              border: 1px solid purple;
+              border-style: solid;
+              border-color: rgba(153, 0, 153);
+              box-shadow: 0 0 8px 8px rgba(153, 0, 153, 0.3), 0 0 6px 8px rgba(153, 0, 153, 0.19);
+              background-color: rgba(153, 0, 153, 0.7);
+              margin-top : 100px;
+              margin-left : 545px;
+              width:300px;
+              height:auto;
+              color: white;
+              border-radius:50px;
+              font-family: 'Comic Sans MS';
+          }
+      </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script>
+             
+            function checkEmail()
+            {    
+                
+                var email = document.getElementById('{!$Component.fmvd.email}').value;
+                if(!email.match(/^[a-zA-Z0-9._]{3,}@[a-z]{3,}[.]{1}[a-z.]{2,6}$/))
+                {  
+                    alert('Please provide a valid email address');
+                }
+                
+            }
+</script>
+  </head>
+  <p align="center" style="font-size:50px;">Scheduler Tools</p>
+  <div id="pos1">
+      <apex:form id="fmvd">
+          <br></br><p align="center">Log in here</p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<apex:input type="text"  id="email" onchange="checkEmail()"/><br></br><br></br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password&nbsp;&nbsp;&nbsp;&nbsp;<apex:input type="text"  label="Number2"/><br></br><br></br>
+          <div align="center">
+              <apex:commandButton value="Log in"/>
+          </div><br></br>
+      </apex:form>
+  </div>
+</apex:page>

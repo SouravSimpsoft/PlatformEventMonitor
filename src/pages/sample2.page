@@ -1,0 +1,12 @@
+<apex:page controller="addition" sidebar="false" showHeader="false">
+ <apex:form >
+  <apex:pageBlock >
+      <apex:pageblockSection >
+          <apex:inputText value="{!a}" label="a:"/>
+          <apex:inputText value="{!b}" label="b:"/>
+          <apex:outputText label="c:">{!c}</apex:outputText>
+          <apex:commandButton value="Add" action="{!adding}"/>
+      </apex:pageblockSection>
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

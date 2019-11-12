@@ -1,0 +1,8 @@
+<apex:page controller="cookie2" action="{!move}" renderAs="{!if($CurrentPage.parameters.isPdf == null, null, 'pdf')}" id="myPage">
+  <apex:form >
+      <apex:outputText value="{!data}"></apex:outputText>
+      <apex:outputText value="{!data2}"></apex:outputText>
+      <apex:commandButton action="{!out}" value="Log out!"/>
+      <apex:commandLink value="PDF" action="/apex/co2?isPdf=true"/>
+  </apex:form>
+</apex:page>

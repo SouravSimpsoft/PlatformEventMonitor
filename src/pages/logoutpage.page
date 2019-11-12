@@ -1,0 +1,14 @@
+<apex:page sidebar="false" showHeader="false">
+<head>
+    <script type="text/javascript">
+        window.setTimeout("redirectpage();", 3000);    
+        function redirectpage(){
+        window.top.location.href = '/apex/login';
+    }
+</script>
+</head>
+<body>
+<img src="https://c.ap8.visual.force.com/resource/1553759227000/demo1" alt="logo"/>
+    <p align="center" style="font-size:60px;color:#000066;">You Have Sucessfully Logged Out</p>
+  </body>
+</apex:page>

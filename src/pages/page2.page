@@ -1,0 +1,10 @@
+<apex:page standardController="Employee__c"><apex:form >
+    <apex:pageBlock title="Edit Information">
+            <apex:pageBlockSection collapsible="false" columns="1">
+        		<b>First Name: </b><apex:inputField value="{!Employee__c.First_Name__c}"/>
+            	<b>Last Name: </b><apex:inputField value="{!Employee__c.Last_Name__c}"/>
+        	</apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:commandButton value="Save" action="{!save}"/>
+    </apex:form>
+</apex:page>

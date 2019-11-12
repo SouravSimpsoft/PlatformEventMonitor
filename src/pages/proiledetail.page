@@ -1,0 +1,9 @@
+<apex:page showHeader="false" sidebar="false">
+    <apex:form >
+            <apex:tabPanel >
+                <apex:tab label="Details">
+                    <apex:detail relatedList="false" title="true" inlineEdit="false"/>
+                </apex:tab>
+            </apex:tabPanel>
+    </apex:form>
+</apex:page>

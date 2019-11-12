@@ -1,0 +1,5 @@
+<apex:page controller="samplelg">
+  <apex:form >
+      <apex:outputText value="{!data}"></apex:outputText>
+  </apex:form>
+</apex:page>

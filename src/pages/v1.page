@@ -1,0 +1,19 @@
+<apex:page standardController="Estimates__c" extensions="EstimatesExtension">
+	<apex:form >
+    	<apex:pageBlock title="Here you can fill the estimates" mode="edit">
+        	<apex:pageBlockButtons >
+            	<apex:commandButton action="{!save}" value="Save"/>
+        	</apex:pageBlockButtons>
+        	<apex:repeat value="{!listWrappers}" var="wrapper">
+            	<apex:pageBlockSection title="Estimates">
+                	<apex:inputField value="{!wrapper.estimate.Project__c}"/>
+                	<apex:inputField value="{!wrapper.estimate.Customer__c}"/>
+                	<apex:inputField value="{!wrapper.estimate.ContactPerson__c}"/>
+                	<apex:inputField value="{!wrapper.estimate.Status__c}"/>
+                	<apex:inputField value="{!wrapper.estimate.Notes__c}"/>
+            	</apex:pageBlockSection>
+        	</apex:repeat>
+        	<apex:commandButton value="Add new record" action="{!addEstimate}" immediate="true"/>
+    	</apex:pageBlock>
+    </apex:form>
+</apex:page>

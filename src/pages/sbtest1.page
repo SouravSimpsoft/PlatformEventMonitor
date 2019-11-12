@@ -1,0 +1,10 @@
+<apex:page docType="html-5.0" StandardController="Weeksheet__c" extensions="generatetimesheet" >
+<apex:form >
+    <apex:pageBlock title="Weekly Timesheet">
+       <apex:pageBlockSection >
+            <apex:input type="date" value="{!date1}" label="Enter Week Start Date:"/>
+            <apex:commandButton value="Generate" action="{!generate}"/>
+       </apex:pageBlockSection>
+    </apex:pageBlock>
+ </apex:form>
+</apex:page>
